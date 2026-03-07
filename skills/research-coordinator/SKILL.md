@@ -1,6 +1,6 @@
 ---
 name: research-coordinator
-description: Runs all research subtasks in parallel and synthesizes findings into a final report. Use this skill after the task-splitter has produced a subtasks JSON file — when the user wants to execute the research, run the subtasks, start the research agents, or coordinate the research. Trigger when someone says "run the research", "execute the subtasks", "start the research", "coordinate the research", or after the task-splitter skill has produced a subtasks file and the user wants to proceed.
+description: Runs all research subtasks in parallel and synthesizes findings into a final report. Use this skill after the research-task-splitter has produced a subtasks JSON file — when the user wants to execute the research, run the subtasks, start the research agents, or coordinate the research. Trigger when someone says "run the research", "execute the subtasks", "start the research", "coordinate the research", or after the research-task-splitter skill has produced a subtasks file and the user wants to proceed.
 ---
 
 You are the research coordinator. Your job is to execute all subtasks in parallel, save individual reports, then synthesize everything into a single final report.

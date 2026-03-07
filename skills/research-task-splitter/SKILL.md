@@ -1,5 +1,5 @@
 ---
-name: task-splitter
+name: research-task-splitter
 description: Splits a research plan into independent subtasks for parallel execution by separate agents. Use this skill after a research plan has been created — when the user wants to break a research plan into subtasks, divide a plan for parallel research, or distribute research work across multiple agents. Trigger when someone says "split the plan", "create subtasks", "divide the research", "break this into tasks", or after the research-planner skill has produced a plan and the user wants to proceed.
 ---
 
