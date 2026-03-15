@@ -21,6 +21,8 @@ Writing Python unit/integration/functional/perf tests.
 - Test edges/errors
 - Coverage: meaningful > %
 
+For TDD workflow (Red-Green-Refactor cycle, naming conventions, quality principles) refer to @tdd-best-practices.md
+
 ## Patterns
 
 ### 1) Class method
@@ -231,3 +233,5 @@ tests/
 ```sh
 uv run pytest --cov-report=term-missing tests/
 ```
+
+For coverage thresholds, critical path rules, and avoiding coverage theater refer to @tdd-best-practices.md
