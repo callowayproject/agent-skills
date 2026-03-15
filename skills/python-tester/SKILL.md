@@ -1,6 +1,6 @@
 ---
-name: testing-python
-description: Implement comprehensive Python testing strategies with pytest. USE WHEN writing Python unit/integration/functional/perf tests.
+name: python-tester
+description: Implement comprehensive Python testing strategies with pytest. USE WHEN writing Python unit/integration/functional/perf tests or TDD workflow (Red-Green-Refactor cycle, naming conventions, quality principles) refer to @tdd-best-practices.md
 ---
 
 # Python Testing Patterns
