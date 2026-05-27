@@ -7,6 +7,15 @@ repos:
       - id: ruff-check
         args: [--fix, --exit-non-zero-on-fix]
         exclude: test.*
+  - repo: https://github.com/rvben/rumdl-pre-commit
+    rev: v0.0.222  # Use latest version
+    hooks:
+      - id: rumdl-fmt  # Pure format, always exits 0
+        files: ^.*\.md$
+        args: [--config, .rumdl.toml, --verbose]
+      - id: rumdl      # Lint + auto-fix, fails if unfixable issues remain
+        files: ^.*\.md$
+        args: [--config, .rumdl.toml, --verbose]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:

@@ -1,0 +1,114 @@
+{
+  "skill_name": "exec-decision-brief",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need to pitch breaking up our monolith into microservices. The audience is our VP of Engineering and CTO. We've been on the monolith for 8 years. The main problems are: deployment coupling (one bad deploy takes everything down), database bottlenecks causing p99 latency spikes to 4 seconds during peak, and our team of 40 engineers all working in one repo which creates constant merge conflicts. I think we should move to domain-bounded services over 18 months. Help me build the executive brief.",
+      "expected_output": "A full executive decision brief with three-act deck structure, advisory framework applied, stakeholder filter map, proactive objection handling, and a confident declarative headline.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "e1-a1",
+          "name": "Declarative headline (not a question)",
+          "description": "The headline/title must be a declarative statement recommending action, not 'Whether to X' or a question. Example good: 'Decompose the Monolith to Unblock Growth'. Example bad: 'Should We Break Up the Monolith?'"
+        },
+        {
+          "id": "e1-a2",
+          "name": "Three-act structure present",
+          "description": "Output contains clearly labeled Act 1 (context/alignment), Act 2 (problem themes with impact), and Act 3 (recommendation/decision) sections or slides."
+        },
+        {
+          "id": "e1-a3",
+          "name": "Stakeholder concerns separated by role",
+          "description": "Addresses VP Engineering and CTO separately with role-specific concerns — VP Eng (developer velocity, workflow), CTO (strategic direction, risk exposure)."
+        },
+        {
+          "id": "e1-a4",
+          "name": "Proactive objection handling embedded",
+          "description": "At least 2 predictable objections (e.g., migration risk, timeline, cost) are addressed proactively within the recommendation section, not as an afterthought."
+        },
+        {
+          "id": "e1-a5",
+          "name": "Advisory Framework applied (Topic/Stakes/Risks/Advice/Benefits)",
+          "description": "The recommendation slide or section covers all five Advisory Framework elements: what decision is being made (Topic), what's at risk if delayed (Stakes), known failure modes (Risks), what is recommended and why (Advice), and measurable success (Benefits)."
+        },
+        {
+          "id": "e1-a6",
+          "name": "Business impact quantified",
+          "description": "At least one business metric is quantified (e.g., latency cost, incident cost, engineering time lost to merge conflicts) — not just technical description."
+        },
+        {
+          "id": "e1-a7",
+          "name": "Explicit decision ask on closing slide",
+          "description": "Output ends with an explicit decision request, not a vague 'next steps.' Should include: what decision is needed, who owns it, and timeline."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We've had 4 meetings now about adopting GitHub Actions to replace our Jenkins setup. Every time we get close to a decision, it gets deferred. The last meeting ended with the VP of Engineering saying 'we need to think about the migration risk more' and the CTO saying 'let's revisit next quarter.' Our Head of Platform has concerns about the migration effort. I've already shown cost savings ($180K/year), reliability improvements, and developer satisfaction data. What am I doing wrong and how do I finally close this?",
+      "expected_output": "Diagnosis of failure modes, identification of real blockers (political or pre-meeting misalignment), recovery strategy, and a restructured brief or meeting plan to close the decision.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "e2-a1",
+          "name": "Diagnoses against named failure modes",
+          "description": "References the skill's failure mode taxonomy (leading with technical depth, no clear recommendation, missing business framing, reactive objection handling) and maps the user's situation to at least one of them."
+        },
+        {
+          "id": "e2-a2",
+          "name": "Identifies pre-meeting alignment gap",
+          "description": "Explicitly identifies that the joint meeting is being entered without pre-aligning stakeholders 1:1. Recommends pre-briefing VP Eng, CTO, and/or Head of Platform separately before the next joint meeting."
+        },
+        {
+          "id": "e2-a3",
+          "name": "Addresses Head of Platform blocker",
+          "description": "Specifically addresses the Head of Platform's concerns rather than ignoring this stakeholder. Suggests a path to resolve or neutralize this blocker before re-engaging executives."
+        },
+        {
+          "id": "e2-a4",
+          "name": "Provides political/escalation path",
+          "description": "Includes guidance for what to do if stakeholder concerns are political rather than technical — e.g., seeking executive sponsor alignment, reframing urgency, or escalating through a different channel."
+        },
+        {
+          "id": "e2-a5",
+          "name": "Reframes around business outcomes not data already seen",
+          "description": "Moves beyond showing more data (which has already failed 4 times) and reframes around a business urgency the room hasn't yet engaged with (e.g., competitive risk, cost trajectory, strategic alignment)."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We just found a critical authentication bypass vulnerability in our API gateway. It's being actively exploited. We need $200K emergency budget approval from our CFO and CISO in the next 48 hours to engage a security incident response firm. I have 20 minutes with both of them tomorrow morning. I've never made an emergency budget ask before. What do I do?",
+      "expected_output": "A time-boxed 20-minute decision brief, urgency framing with business risk quantification, separate CFO/CISO objection handling, and a follow-up protocol.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "e3-a1",
+          "name": "Ask scoped to 20-minute decision",
+          "description": "Structure is explicitly designed for 20 minutes. Does not include a 6-act deck or extensive background — prioritizes speed to decision."
+        },
+        {
+          "id": "e3-a2",
+          "name": "Risk quantified in business terms",
+          "description": "Goes beyond 'critical severity' to quantify business risk: breach notification costs, regulatory exposure, customer trust, revenue at risk, or similar financial/reputational framing."
+        },
+        {
+          "id": "e3-a3",
+          "name": "CFO and CISO addressed separately",
+          "description": "Distinct objection handling for CFO (cost, process, budget authority) vs CISO (vendor vetting, scope, security standards) — not treated as a single audience."
+        },
+        {
+          "id": "e3-a4",
+          "name": "Urgency framing with specific timeline",
+          "description": "Clearly communicates why the decision cannot wait — active exploitation, 48-hour window, or equivalent — and ties urgency to specific business consequences, not just severity labels."
+        },
+        {
+          "id": "e3-a5",
+          "name": "Post-meeting follow-up protocol",
+          "description": "Includes guidance for what happens after the meeting: written decision record, next steps, who owns execution, and how the outcome is communicated to stakeholders."
+        }
+      ]
+    }
+  ]
+}

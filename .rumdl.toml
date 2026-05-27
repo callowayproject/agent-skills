@@ -1,0 +1,60 @@
+# rumdl configuration file
+
+# Global configuration options
+[global]
+line-length = 120
+disable = []
+flavor = "mkdocs"
+
+# List of file/directory patterns to exclude from linting
+exclude = [
+    # Common directories to exclude
+    ".git",
+    ".github",
+    "node_modules",
+    "vendor",
+    "dist",
+    "build",
+
+    # Specific files or patterns
+    "CHANGELOG.md",
+    "LICENSE.md",
+]
+
+# Respect .gitignore files when scanning directories (default: true)
+respect-gitignore = true
+
+
+# Rule-specific configurations (uncomment and modify as needed)
+# [MD003]
+# style = "atx"  # Heading style (atx, atx_closed, setext)
+
+[MD004]
+style = "dash"  # Unordered list style (asterisk, plus, dash, consistent)
+
+# [MD007]
+# indent = 4  # Unordered list indentation
+
+[MD013]
+line-length = 120  # Maximum characters per line (default: 80)
+code-blocks = true  # Don't check code blocks (default: true)
+tables = true  # Don't check tables (default: false)
+headings = true  # Check headings (default: true)
+paragraphs = true  # Check paragraph/regular text (default: true)
+strict = false  # Disables exceptions for URLs, etc. (default: false)
+reflow = false  # Enable automatic text reflow/wrapping (default: false)
+reflow-mode = "semantic-line-breaks"  # Reflow mode: "default", "normalize", "sentence-per-line", or "semantic-line-breaks" (default: "default")
+length-mode = "visual"  # How to count line length: "visual", "chars", or "bytes" (default: "visual")
+
+# [MD044]
+# names = ["rumdl", "Markdown", "GitHub"]  # Proper names that should be capitalized correctly
+# code-blocks = false  # Check code blocks for proper names (default: false, skips code blocks)
+
+[MD049]
+style = "underscore"  # Options: "consistent", "asterisk", "underscore"
+
+[MD050]
+style = "asterisk"  # Options: "consistent", "asterisk", "underscore"
+
+[MD060]
+enabled = true
