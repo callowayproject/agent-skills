@@ -152,11 +152,15 @@ Use progressive disclosure rather than density: if a theme has more to show than
 
 ### Opening (before Act 1)
 
-Before the first content slide, establish two things:
+The first four slides establish the context before any content. Each has a distinct job.
 
-**Self-introduction.** Your first words are a brief personal introduction — who you are, your role, and why you are the right person to make this recommendation. One to two sentences maximum. This is not a slide; it is spoken while the title slide is visible. Example: "I'm [Name], the senior engineer leading our platform reliability work. I've been living in this problem for six months, and I'm here to close a decision today."
+**Slide 1 — Title.** A declarative headline summarizing the recommendation's impact. Include the presenter's name and role on the slide. The spoken self-introduction happens here — one to two sentences while this slide is on screen, not as a separate element. Example: "I'm [Name], the senior engineer leading our platform reliability work. I've been living in this problem for six months, and I'm here to share what I've found." This is not a slide; it is spoken while the title slide is visible.
 
-**Driving problem slide.** The second slide states the central problem — the single underlying issue that connects everything that follows. Keep the slide content to one sharp declarative sentence or a stark before/after contrast. The "we're here to have a conversation" framing belongs only in the presenter notes. Spoken aloud, not on screen: "These slides are a guide, not a script — please interrupt with questions as they come up." This signals confidence and repositions you as a peer in the room.
+**Slide 2 — Stakeholder Concerns.** This is not a traditional agenda. Its job is to immediately signal to each stakeholder that their concern will be addressed. List 5–7 bullets, each naming a specific topic or question the presentation will answer — drawn from what you know each stakeholder cares about. The goal is twofold: give the room an orientation, and establish credibility by showing you already know what they're thinking about. Label this slide by its content — "What We're Here to Address" or "The Questions This Brief Answers" — not "Agenda."
+
+**Slide 3 — Driving Problem.** States the central problem — the single underlying issue that connects everything that follows. Keep the slide content to one sharp declarative sentence or a stark before/after contrast. The "we're here to have a conversation" framing belongs only in the presenter notes. Spoken aloud, not on screen: "These slides are a guide, not a script — please interrupt with questions as they come up." This signals confidence and repositions you as a peer in the room.
+
+**Slide 4 — Today's Roadmap.** A brief structural map of the presentation: 3–5 bullets naming each section. Its job is to prevent premature questions like "but what's the recommendation?" — the room can see it's coming. This is not a stakeholder-concern slide; it is a navigation aid. Label it "Today's Roadmap" or "How We'll Walk Through This."
 
 ### Central Narrative Thread
 
@@ -168,30 +172,39 @@ The thread makes the deck coherent. Without it, the audience tracks disconnected
 
 ### Act 1 — Align the Room
 
-- Title slide: declarative headline summarizing the recommendation's impact
-- Driving problem slide (see Opening above) — one sentence naming the root issue
-- Agenda slide: three to five bullets naming each act or major section; gives the room a map so they know where you're going and stops premature questions about "but what's the recommendation?" — they can see it's coming
+- Slides 1–4 (see Opening above): title, stakeholder concerns, driving problem, roadmap
 - Slides establishing shared context: current state, strategic goals, and why this decision matters _now_ — all anchored to the central narrative thread
 
 Output of Act 1: a shared problem statement the room has already implicitly agreed to.
 
 ### Act 2 — Define the Problem
 
-- One slide per strategic theme
-- Show patterns, not a list of complaints
-- Each slide: headline problem statement + 2–3 bullets of quantified evidence visible on screen (cost, risk, velocity, or revenue) — the quantification must be on the slide, not only in presenter notes; the audience needs to see it to believe it
+Apply the [Advisory Framework](advisory-framework.md) to each strategic theme slide. Each slide answers three of the five framework elements:
+
+- **Topic** → the slide's headline: one sentence naming the strategic challenge
+- **Stakes** → what is at risk if this goes unaddressed — the cost of inaction, expressed in business terms (dollars, time, risk exposure)
+- **Risks** → the specific failure modes already manifesting, quantified on screen
+
+The Advice and Benefits elements complete in Act 3 — but plant the stakes clearly here so the recommendation feels inevitable, not surprising.
+
+Additional requirements per slide:
+- Show patterns, not a list of complaints — group symptoms into a root cause
+- 2–3 bullets of quantified evidence visible on screen (cost, risk, velocity, or revenue); the quantification must be on the slide, not only in presenter notes; the audience needs to see it to believe it
+- Every metric or cost figure must have a source or backing data cited in the presenter notes or prep-guide; do not present figures that cannot be substantiated if challenged
 - Presenter notes carry the narrative, context, and live objection responses
 
 ### Act 3 — Drive Decisions
 
-Present actionable recommendations tied to the agreed problems. Use the [Advisory Framework](advisory-framework.md).
+Present actionable recommendations tied to the agreed problems. Use the [Advisory Framework](advisory-framework.md) — specifically the Advice and Benefits elements that were seeded in Act 2.
+
+The frame for Act 3 is not "please authorize this." It is: "here is the path that gives you the best chance of success." Your job is to make the recommended path feel like the obvious choice — not because you're selling it, but because you've already shown the evidence and done the analysis. Executives approve things they trust; they fund paths they believe in. Act 3 earns that belief.
 
 - One clear recommendation (not a menu of options) — state it confidently and explain why it is right, not how you arrived at it
 - Solution summary slide: a concise overview of the proposed path — what it is, the key phases or components, and the timeline. This is the "here's the plan at a glance" before you go deeper. One slide, scannable at a glance
 - What is gained by choosing this path — tie to the central narrative thread
 - What is given up — one honest sentence about the cost or constraint; do not omit this or the room will find it themselves
 - Proactive objection handling embedded in the recommendation slide — address the 2–3 most likely concerns before they are raised
-- Explicit decision request: "Do we have alignment to proceed?"
+- Conclusion slide (see below) — end with reinforcement of the recommendation, not a request
 
 **Do not proactively raise rejected alternatives or rollback plans.** If an executive asks about a different path, name the drawback directly and anchor back to the recommendation. If no one asks, move forward.
 
@@ -222,13 +235,14 @@ Produce two files:
 
 The presentation content, structured as:
 
-1. **Title slide + spoken intro** — declarative headline (not a question; not "Whether to X"); presenter notes contain the 1–2 sentence spoken self-introduction delivered while this slide is on screen
-2. **Driving problem slide** — one declarative sentence or stark contrast naming the central issue; the "we're here to have a conversation, interrupt freely" framing lives in the presenter notes, not on screen
-3. **Agenda slide** — 3–5 bullet roadmap of what the deck covers, so the room knows the recommendation is coming and can follow the argument rather than jumping ahead
-4. **Act 1 slides** — current state, business context, urgency framing; one idea per slide; every slide connects back to the central narrative thread
-5. **Act 2 slides** — strategic themes with business impact quantified; one theme per slide; each shows how the central problem drives this specific cost or risk
-6. **Act 3 slides** — recommendation (Advisory Framework applied), solution summary (what the plan is at a glance: phases, timeline, key components), what is gained, what is given up (one honest line), embedded objection responses; no alternative walk-through
-7. **Decision slide** — explicit ask, owner, timeline, and close question
+1. **Title slide + spoken intro** — declarative headline (not a question; not "Whether to X"); include the presenter's name and role on the slide; presenter notes contain the 1–2 sentence spoken self-introduction delivered while this slide is on screen
+2. **Stakeholder concerns slide** — 5–7 bullets naming the specific topics or questions this presentation answers, drawn from what each stakeholder cares about; labeled by its content (e.g., "What We're Here to Address"), not "Agenda"
+3. **Driving problem slide** — one declarative sentence or stark contrast naming the central issue; the "we're here to have a conversation, interrupt freely" framing lives in the presenter notes, not on screen
+4. **Today's Roadmap slide** — 3–5 bullets mapping the deck's sections so the room can follow the argument and knows the recommendation is coming
+5. **Act 1 slides** — current state, business context, urgency framing; one idea per slide; every slide connects back to the central narrative thread
+6. **Act 2 slides** — strategic themes; each slide applies the Advisory Framework (Topic/Stakes/Risks); business impact quantified on screen with sources cited in presenter notes or prep-guide
+7. **Act 3 slides** — recommendation (Advisory Framework Advice + Benefits elements), solution summary (phases, timeline, key components), what is gained, what is given up (one honest line), embedded objection responses; no alternative walk-through
+8. **Conclusion slide** — reinforce the recommendation and what the audience gains by choosing this path; end with confidence, not a request; no explicit ask for authorization
 
 Slide content must follow the one-theme-per-slide rule. Each slide shows a headline claim plus 2–3 supporting bullets or data points. Explanation and narrative go in presenter notes. If a slide's theme has more supporting evidence than fits cleanly, split it into a claim slide and a detail slide — never compress a paragraph onto screen.
 
@@ -248,8 +262,9 @@ Everything around the meeting:
 1. **Pre-meeting checklist** — timeline, who to brief 1:1, what to send in advance, and in what order
 2. **1:1 briefing scripts** — one per stakeholder: what to say, what to listen for, how to handle pushback in that conversation
 3. **Stakeholder filter map** — full table of stakeholders, what they care about, and what will cause each to block
-4. **Live conflict scripts** — Acknowledge/Reframe/Anchor sequences for the 2–3 most likely in-room objections
-5. **Post-meeting follow-up protocol** — send a written decision record within 24 hours; cover three scenarios: decision approved (next steps, owner, timeline), decision deferred (what specific condition must be met before reconvening), decision denied (what you heard, what changes, when you revisit)
+4. **Data sources and backing** — for every cost figure, metric, or quantified risk that appears in the deck, cite the source here so the presenter can respond confidently if challenged
+5. **Live conflict scripts** — Acknowledge/Reframe/Anchor sequences for the 2–3 most likely in-room objections
+6. **Post-meeting follow-up protocol** — send a written decision record within 24 hours; cover three scenarios: decision approved (next steps, owner, timeline), decision deferred (what specific condition must be met before reconvening), decision denied (what you heard, what changes, when you revisit)
 
 ## Seven Failure Modes to Diagnose
 
@@ -260,3 +275,5 @@ Everything around the meeting:
 5. **Cold room.** Entering a joint meeting without pre-briefing stakeholders 1:1. The joint meeting confirms decisions; it does not make them for the first time.
 6. **The option parade.** Walking the room through options 1, 2, and 3 before landing on option 3. This signals you haven't decided — you've delegated the decision to the room. The analysis happens before you walk in. Present the conclusion, not the journey.
 7. **Leading with rollback.** Opening with exit strategies, rollback plans, or contingency options signals you expect the plan to fail. Prepare them — but surface only if asked. If the room never asks, they're committed. Don't invite doubt you haven't been invited to address.
+8. **Sales pitch framing.** Closing with "Do we have alignment to authorize?" or "We're asking for approval to proceed" positions the audience as gatekeepers and you as a supplicant. The frame should be: "This is the path that gives you the best outcome — here's how we move forward." The room decides; you show them what success looks like.
+9. **Unsubstantiated metrics.** Presenting cost figures, time estimates, or risk numbers without sources in the presenter notes or prep-guide. Executives will challenge figures; if you can't back them up, you lose the room. Every number on screen must have a source you can point to if asked.

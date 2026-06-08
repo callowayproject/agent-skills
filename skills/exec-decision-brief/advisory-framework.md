@@ -1,14 +1,35 @@
 # Advisory Framework
 
+The five elements apply across the whole deck — but they're distributed across acts, not crammed onto a single slide.
+
+| Element | What it answers | Where it appears |
+| --------- | ---------------- | ---------------- |
+| **Topic** | What challenge or decision is being addressed? | Act 2 (per theme) |
+| **Stakes** | What is at risk if we delay or decide wrong? | Act 2 (per theme) |
+| **Risks** | What failure modes are already manifesting? | Act 2 (per theme) |
+| **Advice** | What do you recommend, and why? | Act 3 |
+| **Benefits** | What does success look like in measurable terms? | Act 3 |
+
+## Applying the framework in Act 2 (Problem Definition)
+
+Each strategic theme slide in Act 2 answers Topic, Stakes, and Risks. The point is to make the problem feel real and urgent — so that by the time the recommendation appears in Act 3, the audience already feels the need for it.
+
+**Topic** → the slide headline: one sentence naming the strategic challenge in business terms, not technical description.
+
+**Stakes** → what happens if this goes unaddressed. Express in cost, risk, or missed opportunity. This is the "why now" — if the stakes aren't clear, the recommendation won't feel urgent.
+
+**Evidence for Stakes and Risks** → quantify on screen. The numbers belong on the slide, not buried in presenter notes. An audience that only hears figures must take them on faith; an audience that sees them can absorb and discuss them. Every figure cited should have a source documented in presenter notes or the prep-guide.
+
+The Advice and Benefits elements are planted in Act 2 by making the stakes undeniable — so when Act 3 names the recommendation, it lands as a conclusion, not a proposal.
+
+## Applying the framework in Act 3 (Recommendation)
+
 Every recommendation slide should pass this structure:
 
-| Element | What it answers |
-| --------- | ---------------- |
-| **Topic** | What decision is being made? |
-| **Stakes** | What is at risk if we delay or decide wrong? |
-| **Risks** | What are the known failure modes? |
-| **Advice** | What do you recommend, and why? |
-| **Benefits** | What does success look like in measurable terms? |
+| Element | What the slide shows |
+| --------- | -------------------- |
+| **Advice** | The single recommended path, stated confidently with rationale |
+| **Benefits** | What success looks like in measurable terms — tied to the central narrative thread |
 
 Never present options without a recommendation.
 

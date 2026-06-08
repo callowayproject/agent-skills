@@ -3,8 +3,8 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "I need to pitch breaking up our monolith into microservices. The audience is our VP of Engineering and CTO. We've been on the monolith for 8 years. The main problems are: deployment coupling (one bad deploy takes everything down), database bottlenecks causing p99 latency spikes to 4 seconds during peak, and our team of 40 engineers all working in one repo which creates constant merge conflicts. I think we should move to domain-bounded services over 18 months. Help me build the executive brief.",
-      "expected_output": "A full executive decision brief with three-act deck structure, advisory framework applied, stakeholder filter map, proactive objection handling, and a confident declarative headline.",
+      "prompt": "I need to pitch breaking up our monolith into microservices. My name is Jordan Reeves and I'm the Lead Platform Architect. The audience is our VP of Engineering and CTO. We've been on the monolith for 8 years. The main problems are: deployment coupling (one bad deploy takes everything down), database bottlenecks causing p99 latency spikes to 4 seconds during peak, and our team of 40 engineers all working in one repo which creates constant merge conflicts. I think we should move to domain-bounded services over 18 months. Help me build the executive brief.",
+      "expected_output": "A full executive decision brief with three-act deck structure, advisory framework applied, stakeholder filter map, proactive objection handling, a confident declarative headline, and a conclusion slide.",
       "files": [],
       "assertions": [
         {
@@ -29,31 +29,41 @@
         },
         {
           "id": "e1-a5",
-          "name": "Advisory Framework applied (Topic/Stakes/Risks/Advice/Benefits)",
-          "description": "The recommendation slide or section covers all five Advisory Framework elements: what decision is being made (Topic), what's at risk if delayed (Stakes), known failure modes (Risks), what is recommended and why (Advice), and measurable success (Benefits)."
+          "name": "Advisory Framework applied in Act 2 (Topic/Stakes/Risks)",
+          "description": "Act 2 slides each answer Topic (strategic challenge named in business terms), Stakes (cost of inaction quantified), and Risks (specific failure modes already manifesting). The framework elements should be visible in the structure of each theme slide."
         },
         {
           "id": "e1-a6",
-          "name": "Business impact quantified",
-          "description": "At least one business metric is quantified (e.g., latency cost, incident cost, engineering time lost to merge conflicts) — not just technical description."
+          "name": "Business impact quantified with sources",
+          "description": "At least one business metric is quantified (e.g., latency cost, incident cost, engineering time lost to merge conflicts) and a source or basis for the figure is cited in presenter notes or prep-guide."
         },
         {
           "id": "e1-a7",
-          "name": "Explicit decision ask on closing slide",
-          "description": "Output ends with an explicit decision request, not a vague 'next steps.' Should include: what decision is needed, who owns it, and timeline."
+          "name": "Conclusion slide reinforces recommendation (no explicit authorization ask)",
+          "description": "The final slide is a conclusion that reinforces the recommendation and what the audience gains — not a request for approval or 'Do we have alignment to authorize?' framing. The close should feel like confidence, not a pitch."
+        },
+        {
+          "id": "e1-a8",
+          "name": "Stakeholder concerns slide present as slide 2",
+          "description": "The deck includes a slide (position 2, before the driving problem) listing 5-7 bullets that address specific concerns or questions each stakeholder cares about. This slide should NOT be labeled 'Agenda' — it should be labeled by its content (e.g., 'What We're Here to Address')."
+        },
+        {
+          "id": "e1-a9",
+          "name": "Presenter name on title slide",
+          "description": "The title slide includes the presenter's name and role as slide content (not only in presenter notes)."
         }
       ]
     },
     {
       "id": 2,
-      "prompt": "We've had 4 meetings now about adopting GitHub Actions to replace our Jenkins setup. Every time we get close to a decision, it gets deferred. The last meeting ended with the VP of Engineering saying 'we need to think about the migration risk more' and the CTO saying 'let's revisit next quarter.' Our Head of Platform has concerns about the migration effort. I've already shown cost savings ($180K/year), reliability improvements, and developer satisfaction data. What am I doing wrong and how do I finally close this?",
+      "prompt": "I'm Sam Torres, Senior DevOps Engineer. We've had 4 meetings now about adopting GitHub Actions to replace our Jenkins setup. Every time we get close to a decision, it gets deferred. The last meeting ended with the VP of Engineering saying 'we need to think about the migration risk more' and the CTO saying 'let's revisit next quarter.' Our Head of Platform has concerns about the migration effort. I've already shown cost savings ($180K/year), reliability improvements, and developer satisfaction data. What am I doing wrong and how do I finally close this?",
       "expected_output": "Diagnosis of failure modes, identification of real blockers (political or pre-meeting misalignment), recovery strategy, and a restructured brief or meeting plan to close the decision.",
       "files": [],
       "assertions": [
         {
           "id": "e2-a1",
           "name": "Diagnoses against named failure modes",
-          "description": "References the skill's failure mode taxonomy (leading with technical depth, no clear recommendation, missing business framing, reactive objection handling) and maps the user's situation to at least one of them."
+          "description": "References the skill's failure mode taxonomy (leading with technical depth, no clear recommendation, missing business framing, reactive objection handling, cold room) and maps the user's situation to at least one of them."
         },
         {
           "id": "e2-a2",
@@ -79,8 +89,8 @@
     },
     {
       "id": 3,
-      "prompt": "We just found a critical authentication bypass vulnerability in our API gateway. It's being actively exploited. We need $200K emergency budget approval from our CFO and CISO in the next 48 hours to engage a security incident response firm. I have 20 minutes with both of them tomorrow morning. I've never made an emergency budget ask before. What do I do?",
-      "expected_output": "A time-boxed 20-minute decision brief, urgency framing with business risk quantification, separate CFO/CISO objection handling, and a follow-up protocol.",
+      "prompt": "I'm Alex Kim, Head of Security Engineering. We just found a critical authentication bypass vulnerability in our API gateway. It's being actively exploited. We need $200K emergency budget approval from our CFO and CISO in the next 48 hours to engage a security incident response firm. I have 20 minutes with both of them tomorrow morning. I've never made an emergency budget ask before. What do I do?",
+      "expected_output": "A time-boxed 20-minute decision brief, urgency framing with business risk quantification, separate CFO/CISO objection handling, conclusion framing (not authorization ask), and a follow-up protocol.",
       "files": [],
       "assertions": [
         {
@@ -90,8 +100,8 @@
         },
         {
           "id": "e3-a2",
-          "name": "Risk quantified in business terms",
-          "description": "Goes beyond 'critical severity' to quantify business risk: breach notification costs, regulatory exposure, customer trust, revenue at risk, or similar financial/reputational framing."
+          "name": "Risk quantified in business terms with sources",
+          "description": "Goes beyond 'critical severity' to quantify business risk: breach notification costs, regulatory exposure, customer trust, revenue at risk, or similar financial/reputational framing. Sources or basis for figures are cited."
         },
         {
           "id": "e3-a3",
@@ -107,6 +117,11 @@
           "id": "e3-a5",
           "name": "Post-meeting follow-up protocol",
           "description": "Includes guidance for what happens after the meeting: written decision record, next steps, who owns execution, and how the outcome is communicated to stakeholders."
+        },
+        {
+          "id": "e3-a6",
+          "name": "Conclusion framing not authorization pitch",
+          "description": "The close of the brief frames the path as 'here is what protects the business' rather than 'please approve this budget.' The framing is confident and outcome-focused, not transactional."
         }
       ]
     }
