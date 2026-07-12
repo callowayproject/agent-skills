@@ -7,7 +7,9 @@ You will split a research plan into a set of coherent, non-overlapping subtasks 
 
 ## Step 1: Find the research plan
 
-Look for research plan files in the `research/` directory (relative to the current working directory) using the pattern `research/**/*-research-plan.md`.
+If a plan file path was given directly (e.g. passed in as `plan_path` when this skill is invoked from another skill), use it as-is and skip the search below.
+
+Otherwise, look for research plan files in the `research/` directory (relative to the current working directory) using the pattern `research/**/*-research-plan.md`.
 
 - If **exactly one** plan file is found, use it.
 - If **multiple** plan files are found, list them for the user and ask which one to use.

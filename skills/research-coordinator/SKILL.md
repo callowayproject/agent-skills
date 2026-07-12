@@ -7,7 +7,7 @@ You are the research coordinator. Your job is to execute all subtasks in paralle
 
 ## Step 1: Find the required files
 
-**Subtasks JSON:** Look for a subtasks file using the pattern `research/**/*-subtasks.json`.
+**Subtasks JSON:** If a subtasks file path was given directly (e.g. passed in as `subtasks_path` when this skill is invoked from another skill), use it as-is and skip the search below. Otherwise, look for a subtasks file using the pattern `research/**/*-subtasks.json`.
 
 - If **exactly one** file is found, use it.
 - If **multiple** files are found, list them and ask the user which one to use.
