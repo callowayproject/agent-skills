@@ -1,0 +1,15 @@
+{
+  "name": "calloway-bootstrap-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Calloway Project Bootstrap 5 theme, compiled from Sass source.",
+  "scripts": {
+    "build": "sass scss/calloway-theme.scss dist/calloway-bootstrap.css --style=compressed --no-source-map --load-path=node_modules"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

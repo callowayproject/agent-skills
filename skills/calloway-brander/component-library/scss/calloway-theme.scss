@@ -1,0 +1,367 @@
+// Calloway Project — Bootstrap 5 theme, compiled from Sass source.
+// Token source: ../../colors_and_type.css / ../../DESIGN.md.
+// Selective import (not the full `bootstrap` bundle) — only components in
+// scope per DESIGN.md → Components (Button, Card, Form, Navigation, Table,
+// Alert, Badge, Progress, List group, Dropdown, Pagination, Breadcrumb,
+// Accordion, Modal, Offcanvas, Tooltip, Popover, Toast).
+
+@import 'bootstrap/scss/functions';
+
+// --- Variable overrides (before bootstrap/scss/variables finalizes defaults) ---
+
+$font-family-sans-serif: 'DM Sans', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+$font-family-monospace: 'DM Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+$font-family-base: $font-family-sans-serif;
+
+$font-size-base: 1rem; // 16px
+$line-height-base: 1.5714286;
+
+$h1-font-size: 2.7143rem; // 38px
+$h2-font-size: 2.2857rem; // 32px
+$h3-font-size: 1.8571rem; // 26px
+$h4-font-size: 1.5714rem; // 22px
+$h5-font-size: 1.2857rem; // 18px
+$headings-font-weight: 700;
+$headings-line-height: 1.25;
+
+$body-color: #111111;
+$body-bg: #ffffff;
+$emphasis-color: #111111;
+$body-secondary-color: #7c7064;
+$body-secondary-bg: #faf8f5;
+$body-tertiary-color: #7c7064;
+$body-tertiary-bg: #faf8f5;
+
+$border-color: #d0c3b6;
+$border-color-translucent: #d0c3b6;
+$border-width: 1px;
+
+$primary: #d20000;
+$link-color: $primary;
+$link-hover-color: #8c0000;
+
+$enable-shadows: false;
+$box-shadow: none;
+$box-shadow-sm: none;
+$box-shadow-lg: none;
+$box-shadow-inset: none;
+$card-box-shadow: none;
+
+$transition-base: background-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+$enable-dark-mode: true;
+$color-mode-type: data;
+
+$navbar-brand-font-size: 1rem;
+$navbar-toggler-font-size: 1rem;
+
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/root';
+
+// --- Selective component imports ---
+
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/button-group';
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/badge';
+@import 'bootstrap/scss/alert';
+@import 'bootstrap/scss/progress';
+@import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/close'; // dismiss button, needed by alert/modal/toast
+@import 'bootstrap/scss/pagination';
+@import 'bootstrap/scss/breadcrumb';
+@import 'bootstrap/scss/accordion';
+@import 'bootstrap/scss/modal';
+@import 'bootstrap/scss/offcanvas';
+@import 'bootstrap/scss/tooltip';
+@import 'bootstrap/scss/popover';
+@import 'bootstrap/scss/toasts';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/helpers';
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/utilities/api';
+
+// --- Direct rule overrides (things no Sass variable reaches) ---
+
+// Card fill uses Surface, not body-bg — Bootstrap's $card-bg default already
+// tracks $secondary-bg via its var map in this version, but pin it directly
+// for clarity and belt-and-suspenders shadow removal.
+.card {
+  --bs-card-bg: var(--bs-secondary-bg);
+  --bs-card-color: var(--bs-body-color);
+  box-shadow: none;
+}
+
+// Buttons — hover/active/disabled route through Accent-secondary, which
+// Bootstrap's auto-generated shade doesn't match exactly.
+.btn-primary {
+  --bs-btn-color: var(--bs-body-bg);
+  --bs-btn-hover-color: var(--bs-body-bg);
+  --bs-btn-hover-bg: #8c0000;
+  --bs-btn-hover-border-color: #8c0000;
+  --bs-btn-active-color: var(--bs-body-bg);
+  --bs-btn-active-bg: #8c0000;
+  --bs-btn-active-border-color: #8c0000;
+  --bs-btn-disabled-color: var(--bs-body-bg);
+  font-weight: 600;
+}
+
+.btn-outline-secondary {
+  --bs-btn-hover-color: var(--bs-body-color);
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-color: var(--bs-body-color);
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: var(--bs-primary);
+  font-weight: 600;
+}
+
+.btn {
+  box-shadow: none !important;
+}
+
+// Focus-visible ring — Bootstrap's default focus shadow doesn't route
+// through --bs-primary for every control, so it's pinned here directly.
+.btn:focus-visible,
+a:focus-visible,
+.form-control:focus-visible,
+.form-select:focus-visible,
+.form-check-input:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.15);
+}
+.form-check-input:checked {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.15);
+}
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-color: #8c0000;
+}
+.invalid-feedback {
+  color: #8c0000;
+}
+
+// Navigation — no --bs-* var for the "active nav item" accent treatment.
+.nav-link {
+  color: var(--bs-secondary-color);
+  transition: color 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--bs-body-color);
+}
+.nav-link.active {
+  color: var(--bs-primary) !important;
+  background: var(--bs-body-bg);
+  border-radius: var(--bs-border-radius);
+}
+// .nav-tabs relies on flat bottom corners to visually attach to its content
+// pane (Bootstrap blends the bottom border into the pane background) — the
+// generic rule above would round all four corners and break that.
+.nav-tabs .nav-link.active {
+  border-radius: var(--bs-border-radius) var(--bs-border-radius) 0 0;
+}
+// .nav-pills fills the active link with the accent color, so its text needs
+// to stay light — the generic rule above forces accent-colored text via
+// !important, which would otherwise make the label unreadable on its own fill.
+.nav-pills .nav-link.active {
+  color: var(--bs-nav-pills-link-active-color) !important;
+}
+
+.navbar {
+  background: var(--bs-secondary-bg);
+  border-bottom: var(--bs-border-width) solid var(--bs-border-color);
+}
+.navbar-brand {
+  font-weight: 600;
+  color: var(--bs-body-color);
+}
+
+// Tables — flat, unstriped, Border-separated rows; no shadow.
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-striped-bg: transparent;
+}
+.table > thead > tr > th {
+  color: var(--bs-secondary-color);
+  font-weight: 400;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+// Status dot — single-accent status indicator used in the sample data table.
+.status-dot::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--bs-primary);
+  margin-right: 6px;
+}
+.status-dot.stale::before {
+  background: var(--bs-secondary-color);
+}
+
+// Dropdown — Bootstrap hardcodes box-shadow outside the variable system.
+.dropdown-menu {
+  box-shadow: none;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--bs-primary);
+}
+
+// Accordion — active/expanded state uses the accent instead of Bootstrap's
+// default blue tint; no shadow on the flush/default button.
+.accordion-button {
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  color: var(--bs-primary);
+  background-color: var(--bs-secondary-bg);
+  border-color: var(--bs-primary);
+}
+.accordion-button:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+// Modal / Offcanvas — flat Surface fill, no shadow, matches .card treatment.
+.modal-content {
+  --bs-modal-bg: var(--bs-secondary-bg);
+  box-shadow: none;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+}
+.offcanvas {
+  --bs-offcanvas-bg: var(--bs-secondary-bg);
+  box-shadow: none;
+  border-color: var(--bs-border-color);
+}
+
+// Popover / Tooltip — Bootstrap hardcodes box-shadow outside the variable system.
+.popover {
+  box-shadow: none;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+}
+.tooltip {
+  --bs-tooltip-opacity: 1;
+}
+
+// Pagination — active page uses the accent.
+.pagination .page-link.active,
+.pagination .active > .page-link {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.pagination .page-link:hover {
+  color: var(--bs-primary);
+}
+
+// Progress — $primary-driven bar already picks up the brand red; just
+// confirm no shadow leaks in from the track.
+.progress,
+.progress-bar {
+  box-shadow: none;
+}
+
+// List group — active item uses the accent.
+.list-group-item.active {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+// Toast — flat Surface fill, no shadow, matches modal/popover treatment.
+.toast {
+  --bs-toast-bg: var(--bs-secondary-bg);
+  box-shadow: none;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+// --- Dark mode ---
+// Bootstrap 5.3's [data-bs-theme="dark"] generates most of this automatically
+// from $enable-dark-mode + color functions, but the brand's accent hue-flip
+// (darkened red in light mode → pure logo red in dark mode) must be written
+// explicitly, matching colors_and_type.css's [data-theme="dark"] block.
+[data-bs-theme='dark'] {
+  --bs-body-bg: #0c0a08;
+  --bs-body-color: #efecea;
+  --bs-emphasis-color: #efecea;
+  --bs-secondary-color: #9b9086;
+  --bs-secondary-bg: #171411;
+  --bs-tertiary-color: #9b9086;
+  --bs-tertiary-bg: #171411;
+
+  --bs-border-color: #332d26;
+  --bs-border-color-translucent: #332d26;
+
+  --bs-primary: #ff2600;
+  --bs-primary-rgb: 255, 38, 0;
+  --bs-primary-text-emphasis: #ff6d55;
+  --bs-primary-bg-subtle: #171411;
+  --bs-primary-border-subtle: #332d26;
+  --bs-link-color: #ff2600;
+  --bs-link-color-rgb: 255, 38, 0;
+  --bs-link-hover-color: #ff6d55;
+  --bs-link-hover-color-rgb: 255, 109, 85;
+  --bs-focus-ring-color: rgba(255, 38, 0, 0.35);
+}
+
+[data-bs-theme='dark'] .btn-primary {
+  --bs-btn-hover-bg: #ff6d55;
+  --bs-btn-hover-border-color: #ff6d55;
+  --bs-btn-active-bg: #ff6d55;
+  --bs-btn-active-border-color: #ff6d55;
+}
+
+[data-bs-theme='dark'] .form-control.is-invalid,
+[data-bs-theme='dark'] .was-validated .form-control:invalid {
+  border-color: #ff6d55;
+}
+[data-bs-theme='dark'] .invalid-feedback {
+  color: #ff6d55;
+}
+
+[data-bs-theme='dark'] .dropdown-item.active,
+[data-bs-theme='dark'] .dropdown-item:active {
+  background-color: #ff6d55;
+}
+[data-bs-theme='dark'] .accordion-button:not(.collapsed) {
+  color: #ff6d55;
+  border-color: #ff6d55;
+}
+[data-bs-theme='dark'] .pagination .page-link.active,
+[data-bs-theme='dark'] .pagination .active > .page-link {
+  background-color: #ff6d55;
+  border-color: #ff6d55;
+}
+[data-bs-theme='dark'] .list-group-item.active {
+  background-color: #ff6d55;
+  border-color: #ff6d55;
+}
