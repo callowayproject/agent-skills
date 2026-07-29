@@ -1,0 +1,18 @@
+# Copy this into the target repo as .github/workflows/arch-confirm-check.yml
+#
+# Fails a PR if design/views/*.md or design/README.md are stale relative to design/model.yaml.
+# See ../pr-workflow.md and ../scripts/arch-confirm-check.sh for details.
+name: arch-confirm drift check
+
+on:
+  pull_request:
+    paths:
+      - "design/**"
+
+jobs:
+  check-views-fresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check design/views are current with design/model.yaml
+        run: bash design/.arch-confirm/arch-confirm-check.sh design
