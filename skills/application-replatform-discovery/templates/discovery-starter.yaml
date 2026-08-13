@@ -1,0 +1,132 @@
+meta:
+  tla: ""
+  apm_id: ""
+  business_unit: ""
+  current_platform: ""
+  target_compute: ""
+  target_api_gateway: ""
+  application_repos: []
+  infrastructure_repos: []
+  isolation_zone_repo: ""
+  dr_tier: 0
+  app_owner: ""
+  app_architect: ""
+  discovery_date: ""
+  status: "planned"
+  last_updated: ""
+  session_count: 0
+
+summary:
+  recommendation: ""
+  size: "XS"
+  effort_person_weeks: ""
+  duration: ""
+  target_start: ""
+  target_finish: ""
+  confidence: "low"
+  size_reasons: []
+  top_risks: []
+
+scope:
+  foundation:
+    subscriptions:
+      in_place: "not-sure"
+      owner: ""
+      notes: ""
+    vnet_subnets:
+      in_place: "not-sure"
+      owner: ""
+      notes: ""
+    connectivity:
+      in_place: "not-sure"
+      owner: ""
+      notes: ""
+    compute_env:
+      in_place: "not-sure"
+      owner: ""
+      notes: ""
+    data_platform:
+      in_place: "not-sure"
+      owner: ""
+      notes: ""
+    keyvault_monitoring:
+      in_place: "not-sure"
+      owner: ""
+      notes: ""
+    cicd:
+      in_place: "not-sure"
+      owner: ""
+      notes: ""
+  apps_in_scope: []
+  shared_services: []
+
+container_readiness:
+  services: []
+  checklist:
+    stateless: "not-sure"
+    config_externalized: "not-sure"
+    stdout_logging: "not-sure"
+    graceful_sigterm: "not-sure"
+    probes_defined: "not-sure"
+    resources_sized: "not-sure"
+    non_root_readonly: "not-sure"
+    image_scanned: "not-sure"
+  pcf_gotchas: []
+
+eol:
+  components: []
+
+non_lift_shift:
+  networking:
+    applies: "not-sure"
+    notes: ""
+  identity_secrets:
+    applies: "not-sure"
+    notes: ""
+  apim:
+    applies: "not-sure"
+    notes: ""
+  observability:
+    applies: "not-sure"
+    notes: ""
+  cicd:
+    applies: "not-sure"
+    notes: ""
+  data_migration:
+    applies: "not-sure"
+    notes: ""
+  resiliency_dr:
+    applies: "not-sure"
+    notes: ""
+  governance:
+    applies: "not-sure"
+    notes: ""
+
+modules:
+  decisions: []
+
+sizing:
+  tshirt: "XS"
+  weighted:
+    total_score: 0
+    weighted_size: "XS"
+    drivers:
+      storage_only: 0
+      upgrades_required: 0
+      stored_proc_conversion: 0
+      rearchitecture_required: 0
+      eol_remediation: 0
+      foundation_gaps: 0
+      container_readiness_gaps: 0
+      integration_rewire: 0
+      dr_complexity: 0
+      governance_overhead: 0
+    notes: []
+  assumptions_exclusions: []
+
+out_of_scope:
+  common_exclusions: []
+  tla_specific: []
+
+open_questions: []
+history: []
