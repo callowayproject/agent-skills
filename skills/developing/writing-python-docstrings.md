@@ -79,7 +79,7 @@ def count_by_twos(start: int, end: int) -> list:
 - No types; rely on type hints.
 - Optional args start with `Optional;` and may include default.
 
-```python
+```text
 Args:
     table_handle: An open `smalltable.Table` instance.
     keys: A sequence of strings representing the key of each table row.
@@ -91,7 +91,7 @@ Args:
 
 Describe the returned value(s), especially if complex.
 
-```python
+```text
 Returns:
     A dict mapping keys to row tuples.
 ```
@@ -104,7 +104,7 @@ Use like `Returns`, but for generators.
 
 List exceptions and conditions.
 
-```python
+```text
 Raises:
     IOError: Error accessing the smalltable.
 ```
